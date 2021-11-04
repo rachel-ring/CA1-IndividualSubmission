@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Search{% endblock title %}
+{% block content %}
+<h1>Search Results</h1>
+{% for movie in movie_list %}
+ <div>
+ <h3><a href="{{ movie.get_absolute_url }}">{{ movie.title }}</a></h3>
+ <p>Director: {{ movie.director }}</p>
+ <p>Date Released: {{ movie.date_released }}</p>
+ </div>
+ {% endfor %}
+{% endblock content %}
