@@ -30,6 +30,7 @@ class Movie(models.Model):
     director = models.CharField(max_length=250)
     description = models.TextField(blank=True)
     date_released = models.DateField(blank=False, null=False)
+    cover = models.ImageField(upload_to='covers/', blank=True)
     
     def __str__(self):
         return self.title
