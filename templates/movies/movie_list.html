@@ -4,6 +4,7 @@
  {% for movie in object_list %}
  <div>
  <h2><a href="{{ movie.get_absolute_url }}">{{ movie.title }}</a></h2>
+ <p>Number of reviews: {{ movie.comments.count }}</p>
  </div>
  {% endfor %}
 {% endblock content %}

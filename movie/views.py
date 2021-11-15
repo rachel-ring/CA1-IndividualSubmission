@@ -1,5 +1,8 @@
 from django.views.generic import ListView, DetailView
+from django.views.generic.edit import UpdateView, DeleteView
 from .models import Movie
+# from .forms import CommentForm
+# from django.shortcuts import render, get_object_or_404
 from django.db.models import Q
 
 class MovieListView(ListView):
@@ -9,6 +12,7 @@ class MovieListView(ListView):
 class MovieDetailView(DetailView):
     model = Movie
     template_name = 'movies/movie_detail.html'
+    new_comment = None
 
 
 class SearchResultsListView(ListView):

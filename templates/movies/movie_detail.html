@@ -1,13 +1,38 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}{{ movie.title }}{% endblock title %}
 {% block content %}
- <div class="movie-detail">
-     {% if movie.cover %}
-        <img class = "bookcover" src="{{ movie.cover.url }}" alt="{{ movie.title }}">
-     {% endif %}
- <h2>{{ movie.title }}</h2>
- <p>Director: {{ movie.director }}</p>
- <p>Release Date: {{ movie.date_released }}</p>
- <p>Description: {{ movie.description }}</p>
+ <div class="p-5">
+     <h2>{{ movie.title }}</h2>
+     <hr>
+     <div class="row">
+        <div class="col-sm">
+            {% if movie.cover %}
+                <img  class ="img-responsive movie_detail_image" src="{{ movie.cover.url }}" alt="{{ movie.title }}">
+                {% else %}
+                <img class = "img-responsive movie_detail_image" src="{% static 'images/noCover.png' %}" alt="{{ movie.title }}">
+            {% endif %}            
+        </div>
+        <div class="col-sm">
+            <p>Director: {{ movie.director }}</p>
+            <p>Release Date: {{ movie.date_released }}</p>
+            <p>Description: {{ movie.description }}</p>            
+        </div>
+      </div>
  </div>
+ <hr>
+ <div class="p-5">
+     {% for comment in movie.comments.all %}
+     <p>
+         {{comment}}<br>
+         <span class="text-muted ps-2">By: {{comment.author}}</span>
+     </p>
+  </div>   
+     {% endfor %}
+     {% if user.is_authenticated %}
+        <p><a href="">Add Comment</a></p>
+     {% else %}
+        <p><a href="{% url 'login' %}">Log In</a> or <a href="{% url 'signup' %}">Sign up</a> to leave a comment!</p>
+     {% endif %}
+ 
 {% endblock content %}
