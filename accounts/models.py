@@ -9,7 +9,7 @@ class CustomUser(AbstractUser):
     age = models.PositiveIntegerField(null=True, blank=True)
 
 class Profile(models.Model):
-    user = models.OneToOneField(get_user_model(),null=True,on_delete=models.CASCADE,)
+    user = models.OneToOneField(get_user_model(),on_delete=models.CASCADE,)
     date_of_birth = models.DateField(blank=False, null=False)
     fav_movie = models.CharField(max_length=255)
 
