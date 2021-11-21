@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}User Profile{% endblock title %}
 {% block content %}
- Date Of Birth:{{ user.profile.date_of_birth }}
- <br/>
- Favourite Movie: {{ user.profile.fav_movie }}
+    <div>
+        <h2>Hey {{user.username}}!</h2>
+        <p>
+            Take a look at your profile
+        </p>
+        <hr>
+    </div>
+    <div>
+        <div>
+            <img src="{% static 'images/profile.jfif' %}" alt="Profile Pic" class="rounded-circle mx-auto">
+        </div>
+        Date Of Birth: <em>{{ user.profile.date_of_birth }}</em>
+        <br/>
+        Favourite Movie: <em>{{ user.profile.fav_movie }}</em>
+    </div>
 {% endblock content %}
