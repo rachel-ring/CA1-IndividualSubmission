@@ -5,7 +5,7 @@ from .views import(
     MovieUpdateView,
     SearchResultsListView,
     MovieCreateView,
-    MovieDeleteView
+    MovieDeleteView,
     ) 
 
 urlpatterns = [

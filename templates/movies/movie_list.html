@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}Movies{% endblock title %}
 {% block content %}
+{% if object_list.count == 0 %}
+<p>No Movies to View here:(</p>
+{% endif %}
  {% for movie in object_list %}
  <div>
  <h2><a href="{{ movie.get_absolute_url }}">{{ movie.title }}</a></h2>
