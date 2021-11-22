@@ -4,29 +4,100 @@
 {% block content %}
    <h1>Homepage</h1>
    <img src="{% static 'images/homeImg.PNG' %}" alt="Home Page Image" class="px-3">
-   <div>
+   <div class="p-5">
       <h2>CA1 Specifications</h2>
       <hr>
       <p>
          <ul>
-            <li>Website structure & web page design</li>
-            <li>Use of bootstrap</li>
-            <li>Ue of static files</li>
-            <li>Use of django crispy forms</li>
-            <li>Different layout and structure from labs</li>
+            <li>UI Component</li>
+            <li>Web Application</li>
+            <li>Version Control & GitHub</li>
          </ul>
+      </p>
+   </div>
+   <div class="p-5">
+      <h2>All about my project</h2>
+      <hr>
+         <h3>UI Component</h3>
+         <p>
+            This project uses Bootstrap5 for most of its styling, but also includes css in its static files
+            <br>
+            I used django crispy forms for the forms on this webiste as it makes the forms easier to read and more user friendly
+         </p>
+         <h3>Web Application</h3>
+         <p>
+            A user can log in, log out, reset their password (if they know their email!)
+            and change their password if they're logged in
+            <br>
+            There are multiple database models used in this project: 
+            <ul>
+               <li>CutsomUser</li>
+               <li>Profile</li>
+               <li>Movie</li>
+               <li>Comment</li>
+            </ul>
+            A user who is staff is able to Update, Create, Delete movies from the site
+            <br>
+            A user is also able to view all the movies and comments
+            <br>
+            Database population was made easy by the use of json
+            <br>
+            A one-to-many relationship was used in the Movie app
+            <br>
+            <span class=" text-muted "><em>A movie can have many comments</em></span>
+            <br>
+            A one-to-one relationship was used in the Accounts app
+            <br>
+            <span class=" text-muted "><em>A user can have one and only one Profile</em></span>
+            <br>
+            I used static files for a user profile and for The Image on the Homepage
+            <br>
+            A user is created based on a Custom User Model, and can have one and only one profile
+            <br>
+            User authentication is used not only in the templates "<em>if user.is_staff</em>" 
+            but is also used in Views.py using mixins
+            <br>
+            A staff user can add a movie to the database, and can even upload a cover for the movie
+            <br>
+         </p>
+         <h3>Version Control and Git</h3>
+         <p>
+            This project is uploaded to Github and uses git to track changes to all of the files
+            <br>
+            I have two branches on this project: 
+            <ul>
+               <li>main</li>
+               <li>old-state</li>
+            </ul>
+         </p>
+   </div>
+   <div class="p-5">
+      <h2>Features I'm really proud of</h2>
+      <hr>
+      <p>
          <ul>
-            <li>Sign Up, Log In, Log Out, Password Reset, password change</li>
-            <li>CRUD Functionality</li>
-            <li>Use of Django admin for performing add/update/deletes</li>
-            <li>Use of views, templates and urls for the dynamic generation of web site content</li>
-            <li>Use of json for population of database tables</li>
-            <li>1-many (foreign key) and 1-1 relationships</li>
-            <li>Use of static files & forms</li>
-            <li>Use of custom user model</li>
-            <li>User authentication</li>
-            <li>Use of images</li>
-            <li>User permissions & authorisation</li>
+            <li>When search results are returned, I figured out how to display the number of results I had</li>
+            <li>A staff user is able to upload an image for a new movie without having to go to admin</li>
+            <li>My movie list page i think is designed really well and makes good use of the media</li>
+            <li>On the movie list page, the number of comments is counted and shown to the user</li>
+            
+         </ul>
+      </p>
+   </div>
+   <div class="p-5">
+      <h2>Features I hope to improve in the future</h2>
+      <hr>
+      <p>
+         <ul>
+            <li>
+               At the moment a user cannot create their profile on the webpage 
+               it has to be done manually in the backend by a staff member
+            </li>
+            <li>A comment can only be added to a movie in the admin page</li>
+            <li>
+               I also think with more time I would've liked to add a categories model so that I could 
+               sort the movies out into their genres
+            </li>
          </ul>
       </p>
    </div>

@@ -5,10 +5,11 @@
 <p>Found: <b>{{ movie_list.count }}</b> results</p>
 <hr>
 {% for movie in movie_list %}
- <div>
+ <div class="p-3">
  <h3><a href="{{ movie.get_absolute_url }}">{{ movie.title }}</a></h3>
  <p>Director: {{ movie.director }}</p>
  <p>Date Released: {{ movie.date_released }}</p>
+ <hr>
  </div>
  {% endfor %}
 {% endblock content %}

@@ -1,6 +1,7 @@
 from django.urls.base import reverse_lazy
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import UpdateView, DeleteView, CreateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Movie
 from django.db.models import Q
 
@@ -14,17 +15,17 @@ class MovieDetailView(DetailView):
     template_name = 'movies/movie_detail.html'
     new_comment = None
 
-class MovieCreateView(CreateView):
+class MovieCreateView(LoginRequiredMixin, CreateView):
     model = Movie
     template_name = 'movies/movie_new.html'
     fields = ['title','director', 'description', 'date_released', 'cover']
 
-class MovieUpdateView(UpdateView):
+class MovieUpdateView(LoginRequiredMixin, UpdateView):
     model = Movie
     template_name = 'movies/movie_edit.html'
     fields = ['description']
 
-class MovieDeleteView(DeleteView):
+class MovieDeleteView(LoginRequiredMixin, DeleteView):
     model = Movie
     template_name = 'movies/movie_delete.html'
     success_url = reverse_lazy('movie_list')

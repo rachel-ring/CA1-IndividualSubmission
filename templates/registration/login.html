@@ -4,6 +4,12 @@
 
 {% block content %}
 <h2>Log In</h2>
+<p>
+  Logging in to this site allows you to post comments on the movies!
+  <br>
+  And if you're a staff member you'll be able to <em>add</em>, <em>update</em>, and <em>delete</em> the movies available for review!
+</p>
+<hr>
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
