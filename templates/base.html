@@ -57,6 +57,7 @@
                         </li>
                         <li><a class="dropdown-item" href="{% url 'logout' %}">Sign out</a></li>
                       {% else %}
+                      <li><a class="dropdown-item" href="{% url 'add_profile' user.pk%}">Create Profile</a></li><!--   -->
                       <li><a class="dropdown-item" href="{% url 'password_change'%}">Password Change</a></li>
                         <li>
                             <hr class="dropdown-divider">

@@ -1,14 +1,12 @@
-from django.contrib.auth.forms import UserCreationForm
+# from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView, DetailView
 from .forms import CustomUserCreationForm, ProfileForm
-from .models import Profile
+from .models import CustomUser, Profile
 # Create your views here.
 
 class SignUpView(CreateView):
-    # user_form = CustomUserCreationForm
-    # profile_form = ProfileForm()
-    form_class = ProfileForm
+    form_class = CustomUserCreationForm
     success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
 
@@ -27,13 +25,17 @@ class ProfilePageView(DetailView):
     def get_object(self):
         return self.request.user
 
+class ProfileCreationView(CreateView):
+    form_class = ProfileForm
+    template_name = 'registration/add_profile.html'
+    success_url = reverse_lazy('home')
 
-def add_user(request):
-    if request.method == "POST":
-        uform = UserCreationForm(data = request.POST)
-        pform = ProfileForm(data = request.POST)
-        if uform.is_valid() and pform.is_valid():
-            user = uform.save()
-            profile = pform.save(commit = False)
-            profile.user = user
-            profile.save()
+
+
+# def add_user(request):
+#     if request.method == "POST":
+#         pform = ProfileForm(data = request.POST)
+#         if pform.is_valid():
+#             profile = pform.save(commit = False)
+#             profile.user = CustomUser
+#             profile.save()
