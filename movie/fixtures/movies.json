@@ -1,0 +1,169 @@
+[
+    {
+        "model": "movie.movie",
+        "pk": "58336fa7-a098-4670-8d41-07606987e2b8",
+        "fields": {
+            "title": "The Rocky Horror Picture Show",
+            "director": "Jim Sharman",
+            "description": "The Rocky Horror Picture Show is a 1975 musical comedy horror film by 20th Century Fox, produced by Lou Adler and Michael White and directed by Jim Sharman. The production is a parody tribute to the science fiction and horror B movies of the 1930s through to the early 1960s.",
+            "date_released": "1975-11-03",
+            "cover": "covers/rockyHorror_CPAZpF4.PNG"
+        }
+    },
+    {
+        "model": "movie.movie",
+        "pk": "5946de1d-0cfb-42d3-a777-9b78d5da5b0f",
+        "fields": {
+            "title": "Inception",
+            "director": "Christopher Nolan",
+            "description": "Bit scary innit",
+            "date_released": "2010-01-01",
+            "cover": "covers/Inception_2010_theatrical_poster.jpg"
+        }
+    },
+    {
+        "model": "movie.movie",
+        "pk": "5eba6c8d-6387-4df1-816b-2bbfddc85e2f",
+        "fields": {
+            "title": "Shrek",
+            "director": "Andrew Adamson, Vicky Jenson",
+            "description": "Shrek is a 2001 American computer-animated fantasy comedy film loosely based on the 1990 fairy tale picture book of the same name by William Steig. Directed by Andrew Adamson and Vicky Jenson in their directorial debuts, it stars Mike Myers, Eddie Murphy, Cameron Diaz, and John Lithgow as the voices of the lead characters. The film parodies other fairy tale adaptations, primarily aimed at animated Disney films.[6] The story follows the titular Shrek (Myers), an ogre who finds his swamp overrun by fairy tale creatures who have been banished by the corrupt Lord Farquaad (Lithgow) aspiring to be king. Shrek makes a deal with Farquaad to regain control of his swamp in return for rescuing Princess Fiona (Diaz), whom Farquaad intends to marry. With the help of Donkey (Murphy), Shrek embarks on his quest but soon falls in love with the princess, who is hiding a secret that will change his life forever.",
+            "date_released": "2001-01-01",
+            "cover": "covers/Shrek.jpg"
+        }
+    },
+    {
+        "model": "movie.movie",
+        "pk": "73ceea46-9e76-47d4-850a-08c5b3371370",
+        "fields": {
+            "title": "Cinderella (2021 American film)",
+            "director": "Kay Cannon",
+            "description": "Cinderella is a 2021 American romantic musical film based on the fairy tale of the same name by Charles Perrault. Written and directed by Kay Cannon, it stars singer Camila Cabello as the title character in her acting debut, alongside Idina Menzel, Minnie Driver, Nicholas Galitzine, Billy Porter, and Pierce Brosnan. It is a jukebox musical, featuring pop and rock hits, in addition to several original songs.[2]",
+            "date_released": "2021-08-11",
+            "cover": "covers/Cinderella_2021_film.jpg"
+        }
+    },
+    {
+        "model": "movie.movie",
+        "pk": "a074f977-eae7-456e-865f-5fb1c22e8ac8",
+        "fields": {
+            "title": "Shrek 2",
+            "director": "Andrew Adamson, Kelly Asbury, Conrad Vernon",
+            "description": "Shrek 2 is a 2004 American computer-animated comedy film loosely based on the 1990 picture book Shrek! by William Steig. Directed by Andrew Adamson, Kelly Asbury, and Conrad Vernon, it is the sequel to Shrek (2001) and the second installment in the Shrek film franchise. The film stars Mike Myers, Eddie Murphy and Cameron Diaz, who reprise their respective voice roles of Shrek, Donkey, and Fiona. They are joined by new characters voiced by Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders. Like its predecessor, Shrek 2 also parodies other films based on fairy tales and features references to American popular culture.[5][6][7] Shrek 2 takes place following the events of the first film, with Shrek and Donkey meeting Fiona's parents as her zealous Fairy Godmother, who wants Fiona to marry her son Prince Charming, plots to destroy Shrek and Fiona's marriage. Shrek and Donkey team up with a swashbuckling cat named Puss in Boots to foil her plans.",
+            "date_released": "2004-01-01",
+            "cover": "covers/Shrek_2_poster.jpg"
+        }
+    },
+    {
+        "model": "movie.movie",
+        "pk": "affb3523-f03c-4e89-b471-93593e715b95",
+        "fields": {
+            "title": "Shrek the Third",
+            "director": "Chris Miller",
+            "description": "Shrek the Third (also known as Shrek 3) is a 2007 American computer-animated comedy film loosely based on the 1990 picture book Shrek! by William Steig. Directed by Chris Miller (in his feature-length directorial debut) and co-directed by Raman Hui, it is the third installment in the Shrek film series and the sequel to Shrek 2 (2004). The film stars Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Rupert Everett, Julie Andrews, and John Cleese reprising their voice roles from the previous films, along with new additions such as Justin Timberlake as Arthur Pendragon and Eric Idle as Merlin. In the plot, Prince Charming is plotting to overthrow Shrek and Fiona, who have inherited the throne following King Harold's death. Shrek, who does not want to rule the kingdom and does not believe an ogre is fit to be king, attempts to convince Fiona's underachieving, 16-year-old cousin Artie to reign instead.",
+            "date_released": "2007-01-01",
+            "cover": "covers/Shrek_the_third_ver2.jpg"
+        }
+    },
+    {
+        "model": "movie.movie",
+        "pk": "c455300b-183b-4e18-a2be-092731e6ee4c",
+        "fields": {
+            "title": "SNOW WHITE AND THE SEVEN DWARFS",
+            "director": "David Hand",
+            "description": "Snow White and the Seven Dwarfs is a 1937 American animated musical fantasy film produced by Walt Disney Productions and released by RKO Radio Pictures. Based on the 1812 German fairy tale by the Brothers Grimm, it is the first full-length traditionally animated feature film and the first Disney animated feature film. The story was adapted by storyboard artists Dorothy Ann Blank, Richard Creedon, Merrill De Maris, Otto Englander, Earl Hurd, Dick Rickard, Ted Sears and Webb Smith. David Hand was the supervising director, while William Cottrell, Wilfred Jackson, Larry Morey, Perce Pearce, and Ben Sharpsteen directed the film's individual sequences.",
+            "date_released": "1937-01-01",
+            "cover": "covers/Snow_White_1937_poster.png"
+        }
+    },
+    {
+        "model": "movie.comment",
+        "pk": 1,
+        "fields": {
+            "movie": "c455300b-183b-4e18-a2be-092731e6ee4c",
+            "comment": "Really Nostalgic",
+            "author": 1
+        }
+    },
+    {
+        "model": "movie.comment",
+        "pk": 2,
+        "fields": {
+            "movie": "c455300b-183b-4e18-a2be-092731e6ee4c",
+            "comment": "I remember watching this as a kid!",
+            "author": 3
+        }
+    },
+    {
+        "model": "movie.comment",
+        "pk": 3,
+        "fields": {
+            "movie": "affb3523-f03c-4e89-b471-93593e715b95",
+            "comment": "Better than the first movie!",
+            "author": 2
+        }
+    },
+    {
+        "model": "movie.comment",
+        "pk": 4,
+        "fields": {
+            "movie": "5eba6c8d-6387-4df1-816b-2bbfddc85e2f",
+            "comment": "Iconic Movie!!!!!!",
+            "author": 2
+        }
+    },
+    {
+        "model": "movie.comment",
+        "pk": 5,
+        "fields": {
+            "movie": "58336fa7-a098-4670-8d41-07606987e2b8",
+            "comment": "My favourite movie of all time, 10/10 would watch again",
+            "author": 1
+        }
+    },
+    {
+        "model": "movie.comment",
+        "pk": 6,
+        "fields": {
+            "movie": "5946de1d-0cfb-42d3-a777-9b78d5da5b0f",
+            "comment": "Very scary",
+            "author": 3
+        }
+    },
+    {
+        "model": "movie.comment",
+        "pk": 7,
+        "fields": {
+            "movie": "5946de1d-0cfb-42d3-a777-9b78d5da5b0f",
+            "comment": "SPOOKY",
+            "author": 2
+        }
+    },
+    {
+        "model": "movie.comment",
+        "pk": 8,
+        "fields": {
+            "movie": "c455300b-183b-4e18-a2be-092731e6ee4c",
+            "comment": "UNBELIEVABLE",
+            "author": 3
+        }
+    },
+    {
+        "model": "movie.comment",
+        "pk": 9,
+        "fields": {
+            "movie": "73ceea46-9e76-47d4-850a-08c5b3371370",
+            "comment": "Looks good!",
+            "author": 1
+        }
+    },
+    {
+        "model": "movie.comment",
+        "pk": 10,
+        "fields": {
+            "movie": "58336fa7-a098-4670-8d41-07606987e2b8",
+            "comment": "It gets slightly confusing but good!",
+            "author": 2
+        }
+    }
+]
