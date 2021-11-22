@@ -1,19 +1,33 @@
+from django.urls.base import reverse_lazy
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import UpdateView, DeleteView
+from django.views.generic.edit import UpdateView, DeleteView, CreateView
 from .models import Movie
-# from .forms import CommentForm
-# from django.shortcuts import render, get_object_or_404
 from django.db.models import Q
 
 class MovieListView(ListView):
     model = Movie
     context_object_name = 'movie_list'
     template_name = 'movies/movie_list.html'
+
 class MovieDetailView(DetailView):
     model = Movie
     template_name = 'movies/movie_detail.html'
     new_comment = None
 
+class MovieCreateView(CreateView):
+    model = Movie
+    template_name = 'movies/movie_new.html'
+    fields = ['title','director', 'description', 'date_released', 'cover']
+
+class MovieUpdateView(UpdateView):
+    model = Movie
+    template_name = 'movies/movie_edit.html'
+    fields = ['description']
+
+class MovieDeleteView(DeleteView):
+    model = Movie
+    template_name = ' movies/movie_delete.html'
+    success_url = reverse_lazy('movie_list')
 
 class SearchResultsListView(ListView):
     model = Movie

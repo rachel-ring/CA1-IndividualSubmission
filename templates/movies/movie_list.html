@@ -5,6 +5,10 @@
  <div>
  <h2><a href="{{ movie.get_absolute_url }}">{{ movie.title }}</a></h2>
  <p>Number of reviews: {{ movie.comments.count }}</p>
+ {% if user.is_staff %}
+ <a href="{% url 'movie_edit' movie.pk %}">Edit</a>
+ <a href="{% url 'movie_delete' movie.pk %}">Delete</a>
+ {% endif %}
  </div>
  {% endfor %}
 {% endblock content %}
