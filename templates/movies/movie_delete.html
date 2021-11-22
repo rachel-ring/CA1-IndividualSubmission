@@ -3,7 +3,7 @@
  <h1>Delete</h1>
  <form action="" method="post">
      {% csrf_token %}
-    <p>Are you sure you want to delete "{{ movie.title }}"?</p>
+    <p>Are you sure you want to delete "<span class="border border-primary rounded text-primary">{{ movie.title }}</span>"?</p>
  <button class="btn btn-danger ml-2" type="submit">Confirm</button>
  </form>
 {% endblock content %}

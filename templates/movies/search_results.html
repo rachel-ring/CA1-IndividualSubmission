@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}Search{% endblock title %}
 {% block content %}
-<h1>Search Results</h1>
+<h2>Search Results</h2>
+<p>Found: <b>{{ movie_list.count }}</b> results</p>
+<hr>
 {% for movie in movie_list %}
  <div>
  <h3><a href="{{ movie.get_absolute_url }}">{{ movie.title }}</a></h3>

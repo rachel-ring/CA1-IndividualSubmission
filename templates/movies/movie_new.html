@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>Add new movie</h2>
-    <form action="" method="POST">
+    <h2>Add a new movie</h2>
+    <p>If no image is uploaded it will default to a predetermined image</p>
+    <hr>
+    <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Save" />

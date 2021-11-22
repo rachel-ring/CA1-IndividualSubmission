@@ -23,12 +23,14 @@
  <hr>
  <div class="p-5">
      {% for comment in movie.comments.all %}
-     <p>
-         {{comment}}<br>
-         <span class="text-muted ps-2">By: {{comment.author}}</span>
+     <p class="pb-2">
+         "<em>{{comment}}</em>"
+         <br>
+         <span class="text-muted ps-3">By: {{comment.author}}</span>
      </p>
-  </div>   
      {% endfor %}
+  </div>   
+     
      {% if user.is_authenticated %}
         <p><a href="">Add Comment</a></p>
         {% if user.is_staff %}

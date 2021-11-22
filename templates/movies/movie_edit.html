@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>Edit {{ movie.title }}</h2>
+    <h2>Edit Movie: <span class="border border-primary rounded text-primary p-1">{{ movie.title }}</span></h2>
+    <p>Only the description can be edited</p>
+    <hr>
     <form action="" method="POST">
         {% csrf_token %}
         {{ form.as_p }}

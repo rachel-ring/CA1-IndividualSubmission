@@ -1,17 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Movies{% endblock title %}
 {% block content %}
+<h2>List of Movies</h2>
+<p>This page displays all the movies we have for review and beneath each movie is the comment count!</p>
+<hr>
 {% if object_list.count == 0 %}
 <p>No Movies to View here:(</p>
 {% endif %}
  {% for movie in object_list %}
- <div>
- <h2><a href="{{ movie.get_absolute_url }}">{{ movie.title }}</a></h2>
- <p>Number of reviews: {{ movie.comments.count }}</p>
- {% if user.is_staff %}
- <a href="{% url 'movie_edit' movie.pk %}">Edit</a>
- <a href="{% url 'movie_delete' movie.pk %}">Delete</a>
- {% endif %}
+ <div class="row p-4">
+     <div class="col-4">
+        <img src="{{ movie.cover.url }}" width="200" height="300">
+     </div>
+     <div class="col-8">
+         <h3><a href="{{ movie.get_absolute_url }}" class="text-primary text-underline-hover">{{ movie.title }}</a></h3> 
+         <p>Number of reviews: {{ movie.comments.count }}</p>
+        {% if user.is_staff %}
+        <a href="{% url 'movie_edit' movie.pk %}">Edit</a>
+        <a href="{% url 'movie_delete' movie.pk %}">Delete</a>
+        {% endif %}
+     </div>
+    <hr>
  </div>
  {% endfor %}
 {% endblock content %}
